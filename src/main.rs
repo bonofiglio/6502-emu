@@ -14,7 +14,9 @@ use instructions::{
 };
 
 fn main() {
-    let program: [u8; 4] = [0xA9, 0x50, 0xE9, 0xF0];
+    let program_path = std::env::args().nth(1).unwrap();
+
+    let program = std::fs::read(program_path).unwrap();
 
     let mut cpu = CPU {
         accumulator: 0x00,
