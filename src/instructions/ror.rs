@@ -20,7 +20,7 @@ pub fn ror_accumulator(cpu: *mut CPU) {
     let cpu = unsafe { &mut *cpu };
 
     ror(cpu, accumulator);
-    cpu.program_counter += 2;
+    cpu.program_counter += 1;
 }
 
 pub fn ror_zeropage(cpu: *mut CPU) {
@@ -59,7 +59,7 @@ pub fn ror_absolute(cpu: *mut CPU) {
     let cpu = unsafe { &mut *cpu };
 
     ror(cpu, absolute);
-    cpu.program_counter += 2;
+    cpu.program_counter += 3;
 }
 
 pub fn ror_absolute_x(cpu: *mut CPU) {
@@ -72,5 +72,5 @@ pub fn ror_absolute_x(cpu: *mut CPU) {
     let cpu = unsafe { &mut *cpu };
 
     ror(cpu, absolute_x);
-    cpu.program_counter += 2;
+    cpu.program_counter += 3;
 }

@@ -20,7 +20,7 @@ pub fn rol_accumulator(cpu: *mut CPU) {
     let cpu = unsafe { &mut *cpu };
 
     rol(cpu, accumulator);
-    cpu.program_counter += 2;
+    cpu.program_counter += 1;
 }
 
 pub fn rol_zeropage(cpu: *mut CPU) {
@@ -59,7 +59,7 @@ pub fn rol_absolute(cpu: *mut CPU) {
     let cpu = unsafe { &mut *cpu };
 
     rol(cpu, absolute);
-    cpu.program_counter += 2;
+    cpu.program_counter += 3;
 }
 
 pub fn rol_absolute_x(cpu: *mut CPU) {
@@ -72,5 +72,5 @@ pub fn rol_absolute_x(cpu: *mut CPU) {
     let cpu = unsafe { &mut *cpu };
 
     rol(cpu, absolute_x);
-    cpu.program_counter += 2;
+    cpu.program_counter += 3;
 }

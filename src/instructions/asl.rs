@@ -20,7 +20,7 @@ pub fn asl_accumulator(cpu: *mut CPU) {
     let cpu = unsafe { &mut *cpu };
 
     asl(cpu, accumulator);
-    cpu.program_counter += 2;
+    cpu.program_counter += 1;
 }
 
 pub fn asl_zeropage(cpu: *mut CPU) {
@@ -59,7 +59,7 @@ pub fn asl_absolute(cpu: *mut CPU) {
     let cpu = unsafe { &mut *cpu };
 
     asl(cpu, absolute);
-    cpu.program_counter += 2;
+    cpu.program_counter += 3;
 }
 
 pub fn asl_absolute_x(cpu: *mut CPU) {
@@ -72,5 +72,5 @@ pub fn asl_absolute_x(cpu: *mut CPU) {
     let cpu = unsafe { &mut *cpu };
 
     asl(cpu, absolute_x);
-    cpu.program_counter += 2;
+    cpu.program_counter += 3;
 }
